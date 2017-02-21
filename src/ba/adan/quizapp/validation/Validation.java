@@ -12,7 +12,7 @@ public class Validation {
 
 		if (username.length() > 4 && username.length() < 14) {
 			for (int i = 0; i < username.length(); i++) {
-				if (Character.isLetterOrDigit(username.charAt(i))
+				if (checkCharacters(username.charAt(i))
 						|| username.charAt(i) == '-'
 						|| username.charAt(i) == '_') {
 					isGoodUsername = true;
@@ -28,13 +28,27 @@ public class Validation {
 		return isGoodUsername;
 	}
 
+	// metoda koja provjerava karakter
+	public static boolean checkCharacters(char ch) {
+		boolean isGoodUsername = true;
+
+		if ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122)
+				|| (ch >= 48 && ch <= 57)) {
+			isGoodUsername = true;
+		} else {
+			isGoodUsername = false;
+		}
+
+		return isGoodUsername;
+	}
+
 	// metoda koja provjerava da li je password u ispravnom formatu
 	public static boolean checkPassword(String password) {
 		boolean isGoodPassword = true;
 
 		if (password.length() > 4 && password.length() < 21) {
 			for (int i = 0; i < password.length(); i++) {
-				if (Character.isLetterOrDigit(password.charAt(i))) {
+				if (checkCharacters(password.charAt(i))) {
 					isGoodPassword = true;
 				} else {
 					isGoodPassword = false;
