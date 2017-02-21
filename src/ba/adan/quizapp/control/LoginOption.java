@@ -38,14 +38,12 @@ public class LoginOption {
 					// ako je korisnik prijavljen kao admin
 
 					AdminOption.adminUser(input, accountGroup, questionGroup,
-							indexOfAccount);
-
+							scoreRecordGroup, indexOfAccount);
 				} else {
 					// ako je korisnik prijavljen kao obicni korisnik
 
 					UserOption.user(input, accountGroup, questionGroup,
 							scoreRecordGroup, indexOfAccount);
-
 				}
 			} else {
 				System.out.println("\nNeispravno korisnicko ime ili lozinka.");

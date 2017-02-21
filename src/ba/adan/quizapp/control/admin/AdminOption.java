@@ -7,6 +7,7 @@ import java.util.Scanner;
 import ba.adan.quizapp.account.Account;
 import ba.adan.quizapp.display.Display;
 import ba.adan.quizapp.quiz.Question;
+import ba.adan.quizapp.quiz.ScoreRecord;
 import ba.adan.quizapp.ui.IntUserInput;
 
 public class AdminOption {
@@ -14,7 +15,8 @@ public class AdminOption {
 	// metoda koja sadrzi opcije za admin korisnika
 	public static void adminUser(Scanner input,
 			ArrayList<Account> accountGroup, ArrayList<Question> questionGroup,
-			int indexOfAccount) throws IOException {
+			ArrayList<ScoreRecord> scoreRecordGroup, int indexOfAccount)
+			throws IOException {
 
 		System.out.println("\nPozdrav, "
 				+ accountGroup.get(indexOfAccount).getUsername() + "!");
@@ -37,7 +39,8 @@ public class AdminOption {
 			} else if (userOption == 3) {
 				// OBRISI KORISNIKA
 
-				DeleteUserOption.deleteUser(input, accountGroup);
+				DeleteUserOption.deleteUser(input, accountGroup,
+						scoreRecordGroup);
 			} else if (userOption == 4) {
 				// ODJAVA
 

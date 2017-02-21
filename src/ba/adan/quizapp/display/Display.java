@@ -102,6 +102,7 @@ public class Display {
 	public static void printUserScoreList(ArrayList<Account> accountGroup,
 			ArrayList<ScoreRecord> scoreRecordGroup, int indexOfAccount) {
 		String username = accountGroup.get(indexOfAccount).getUsername();
+		int countResults = 0;
 
 		System.out.printf("\n %-11s\t%11s", "Datum", "Broj bodova");
 		System.out.print("\n----------------------------"
@@ -119,7 +120,13 @@ public class Display {
 				int score = scoreRecordGroup.get(i).getScore();
 
 				System.out.printf(" %-11s\t%11d\n", currentDate, score);
+
+				countResults++;
 			}
+		}
+
+		if (countResults == 0) {
+			System.out.print("Trenutno nema rezultata.\n");
 		}
 	}
 

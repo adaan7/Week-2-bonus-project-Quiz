@@ -111,7 +111,7 @@ public class FileInput {
 			// ispisujemo index tacnog odgovora u fajl
 			for (int j = 0; j < answerList.size(); j++) {
 				if (answerList.get(j).isCorrectAnswer()) {
-					writer.write(j);
+					writer.write(j + "");
 				}
 			}
 
