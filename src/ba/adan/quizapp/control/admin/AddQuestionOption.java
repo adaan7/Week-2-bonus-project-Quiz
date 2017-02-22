@@ -8,6 +8,7 @@ import ba.adan.quizapp.fileio.FileInput;
 import ba.adan.quizapp.quiz.Answer;
 import ba.adan.quizapp.quiz.Question;
 import ba.adan.quizapp.ui.IntUserInput;
+import ba.adan.quizapp.ui.StringUserInput;
 
 public class AddQuestionOption {
 
@@ -17,8 +18,9 @@ public class AddQuestionOption {
 
 		input.nextLine();
 
-		System.out.print("\nUnesite novo pitanje: ");
-		String question = input.nextLine();
+		String questionInputText = "\nUnesite novo pitanje: ";
+		String question = StringUserInput.getString(input, questionInputText,
+				200);
 
 		int numberOfOfferedAnswers = IntUserInput.getInt(input,
 				"Unesite broj ponudjenih odgovora (min 2, max 4): ", 2, 4);
@@ -28,9 +30,10 @@ public class AddQuestionOption {
 		input.nextLine();
 
 		for (int i = 0; i < numberOfOfferedAnswers; i++) {
-			System.out
-					.print("Unesite ponudjeni odgovor broj " + (i + 1) + ": ");
-			String answer = input.nextLine();
+			String answerInputText = "Unesite ponudjeni odgovor broj "
+					+ (i + 1) + ": ";
+			String answer = StringUserInput.getString(input, answerInputText,
+					20);
 
 			Answer newAnswer = new Answer(answer);
 

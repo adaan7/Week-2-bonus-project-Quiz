@@ -6,6 +6,19 @@ import ba.adan.quizapp.account.Account;
 
 public class Validation {
 
+	// metoda koja provjerava da li string sadrzi odredjene karaktere
+	public static boolean checkString(String username) {
+		for (int i = 0; i < username.length(); i++) {
+			char ch = username.charAt(i);
+
+			if (ch == 'š' || ch == 'ð' || ch == 'è' || ch == 'æ' || ch == 'ž') {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
 	// metoda koja provjerava da li je username u ispravnom formatu
 	public static boolean checkUsername(String username) {
 		boolean isGoodUsername = true;

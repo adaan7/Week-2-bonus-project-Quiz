@@ -94,4 +94,31 @@ public class StringUserInput {
 		return password;
 	}
 
+	// metoda koja uzima unos stringa od korisnika sa specificnom duzinom i
+	// karakterima
+	public static String getString(Scanner input, String text, int maxLength) {
+		String userInput = "";
+		boolean wrongUserInput = true;
+
+		while (wrongUserInput) {
+			System.out.print(text);
+			userInput = input.nextLine();
+
+			wrongUserInput = false;
+
+			if (userInput.length() > maxLength) {
+				System.out
+						.println("Pogresan unos. Maksimalna duzina stringa je "
+								+ maxLength + " karaktera.");
+				wrongUserInput = true;
+			} else if (!Validation.checkString(userInput)) {
+				System.out.println("Pogrešan unos. Unos ne podrzava slova:"
+						+ " 'š', 'ð', 'è', 'æ', 'ž'.");
+				wrongUserInput = true;
+			}
+		}
+
+		return userInput;
+	}
+
 }
