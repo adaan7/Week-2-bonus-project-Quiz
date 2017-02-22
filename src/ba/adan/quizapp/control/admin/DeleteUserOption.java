@@ -55,6 +55,7 @@ public class DeleteUserOption {
 		}
 	}
 
+	// metoda koja brise sve rezultate korisnika u grupi rezultata
 	public static void deleteUserRecordFromScoreRecordGroup(
 			ArrayList<ScoreRecord> scoreRecordGroup, String username)
 			throws IOException {

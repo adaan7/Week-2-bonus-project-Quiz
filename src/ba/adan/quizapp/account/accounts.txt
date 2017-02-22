@@ -1,3 +1,6 @@
-adaan7 12345 0 0
+adaan7 12345 0 245
 admin admin 1 0
 cayaa cajaa 0 6
+enso123 enso123 0 0
+mitze mitze 0 30
+dhelic98 12345 0 32
