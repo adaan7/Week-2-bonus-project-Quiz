@@ -1,3 +1,5 @@
+adaan7 245
+22 1 2017
 dhelic98 32
 22 1 2017
 mitze 30
@@ -16,23 +18,29 @@ dhelic98 10
 22 1 2017
 dhelic98 8
 22 1 2017
+dejan 6
+24 1 2017
 cayaa 6
 21 1 2017
 dhelic98 5
 22 1 2017
-cayaa 0
-21 1 2017
-cayaa 0
-21 1 2017
-cayaa 0
-21 1 2017
-cayaa 0
-21 1 2017
-enso123 0
-22 1 2017
-enso123 0
-22 1 2017
+dejan 0
+24 1 2017
+dejan 0
+24 1 2017
 dhelic98 0
 22 1 2017
-adaan7 245
+enso123 0
 22 1 2017
+enso123 0
+22 1 2017
+cayaa 0
+21 1 2017
+cayaa 0
+21 1 2017
+cayaa 0
+21 1 2017
+cayaa 0
+21 1 2017
+adaan7 28
+9 2 2017

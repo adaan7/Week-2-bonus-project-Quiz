@@ -19,6 +19,10 @@ public class Quiz {
 			ArrayList<ScoreRecord> scoreRecordGroup, int indexOfAccount)
 			throws IOException {
 
+		boolean isCorrectAnswer = true;
+		int score = 0;
+		String username = accountGroup.get(indexOfAccount).getUsername();
+
 		// na pocetku igre ispisujemo pravila kviza
 		Display.printQuizRules();
 
@@ -41,10 +45,6 @@ public class Quiz {
 		} catch (Exception ex) {
 
 		}
-
-		boolean isCorrectAnswer = true;
-		int score = 0;
-		String username = accountGroup.get(indexOfAccount).getUsername();
 
 		while (isCorrectAnswer) {
 			// generisemo random integer od 0 do velicine niza grupe pitanja,
